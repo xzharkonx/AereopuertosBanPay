@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+
+
+{% block content %}
+<div class="main">
+    <section class="contenido-principal">
+        <h2>Lista de Aereopuertos de Asia</h2>
+    </section>
+
+    <table>
+		<tr>
+			<th>Id</th>
+			<th>Airport Name</th>
+			<th>City</th>
+			<th>Country</th>
+			<th>IATA Code</th>
+			<th>ICAO Code</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
+			<th>Altitude</th>
+			<th>UTC TimeZone</th>
+			<th>DST</th>
+			<th>Continent/State</th>
+			<th>Nombre nativo</th>
+		</tr>
+
+		{% for aereopuerto in aereopuertos %}
+		<tr>
+			
+				<td>{{ aereopuerto.getId }}</td>
+				<td>{{ aereopuerto.getAirportName }}</td>
+				<td>{{ aereopuerto.getCity }}</td>
+				<td>{{ aereopuerto.getCountry }}</td>
+				<td>{{ aereopuerto.getIATACode }}</td>
+				<td>{{ aereopuerto.getICAOCode }}</td>
+				<td>{{ aereopuerto.getLatitude }}</td>
+				<td>{{ aereopuerto.getLongitude }}</td>
+				<td>{{ aereopuerto.getAltitude }}</td>
+				<td>{{ aereopuerto.getUTCTimeZone }}</td>
+				<td>{{ aereopuerto.getDST }}</td>
+				<td>{{ aereopuerto.getContinentState }}</td>
+				<td>{{ aereopuerto.getNativeName }}</td>
+			
+		</tr>
+		{% endfor %}
+	</table>
+
+</div>
+{% endblock %}

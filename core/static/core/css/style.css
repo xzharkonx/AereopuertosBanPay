@@ -1,0 +1,68 @@
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+table, td, th{
+	border: 1px solid rgba(0,0,0,.2);
+}
+
+table{
+	/*Para colapsar los bordes de todos los
+	elementos de la tabla*/
+	border-collapse: collapse;
+	width: 500px;
+	text-align: center;
+	/*Por si la queremos centrar*/
+	/*margin: 0 auto;*/
+
+}
+
+/*Margenes en las celdas*/
+th,td{
+	padding: 10px 20px;
+}
+/*Fila de encabezado*/
+th{
+	background: #009ddc;
+	color: #fff;
+}
+
+/*Para cambiar el color de las filas
+al pasar el mouse*/
+tr:hover{
+	background: #e5e5e5;
+}
+
+/*
+Para cambiar el diseño de 1 celda al pasar
+el mouse: */
+/*tr>td:hover{
+	background: #e5e5e5;
+	border: 2px solid rgba(0,0,0,.8);
+}*/
+
+/*
+Para cambiar el diseño de 1 celda
+del encabezado al pasar
+el mouse: */
+/*tr>th:hover{
+	background: #e5e5e5;
+	border: 2px solid rgba(0,0,0,.8);
+}*/
+
+.container {
+
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+	padding: 20px;
+}
+

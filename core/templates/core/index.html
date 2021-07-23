@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="main">
+    <section class="contenido-principal">
+        <h2>Lista de Aereopuertos</h2>
+        <div style="width:300px">{{banner}}</div>
+    </section>
+
+    <table>
+		<tr>
+			<th>Id</th>
+			<th>Airport Name</th>
+			<th>City</th>
+			<th>Country</th>
+			<th>IATA Code</th>
+			<th>ICAO Code</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
+			<th>Altitude</th>
+			<th>UTC TimeZone</th>
+			<th>DST</th>
+			<th>Continent/State</th>
+		</tr>
+		{% for aereopuerto in aereopuertos %}
+		<tr>
+			{% for val in aereopuerto %}
+				<td>{{val}}</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+
+</div>
+{% endblock %}
